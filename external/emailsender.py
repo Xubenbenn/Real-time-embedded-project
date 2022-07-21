@@ -23,15 +23,15 @@ class Emailer:
 #Login to Gmail
         session.login(GMAIL_USERNAME, GMAIL_PASSWORD)
 
-#Send Email & Exit
+#Send Email and Exit
         session.sendmail(GMAIL_USERNAME, recipient, headers + "\r\n\r\n" + content)
         session.quit
 
 sender = Emailer()
 
-sendTo = 'loowing397@163.com' #Change this to the email you wish to send to
-emailSubject = "Falldetector" #The Subject of the Email
-emailContent = "Fall has been detected!!!" #The Content / Body of the email
+sendTo = 'loowing397@163.com' #Change this to the email you wish to send to (could change)
+emailSubject = "Falldetector" #The Subject of the Email (could change)
+emailContent = "Fall has been detected!!!" #The Content / Body of the email (could change)
 
 #Sends an email to the "sendTo" address with the specified "emailSubject" as the subject and "emailContent" as the email content.
 sender.sendmail(sendTo, emailSubject, emailContent)
